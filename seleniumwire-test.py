@@ -11,7 +11,8 @@ chrome_options = webdriver.ChromeOptions()
 
 # driver = webdriver.Chrome(ChromeDriverManager().install())
 options = {
-    'addr': 'ec2-3-83-190-70.compute-1.amazonaws.com'
+    'addr': 'ec2-3-83-190-70.compute-1.amazonaws.com',
+    'port': 8087
 }
 devicefarm_client = boto3.client("devicefarm", region_name="us-west-2")
 
