@@ -13,7 +13,7 @@ chrome_options = webdriver.ChromeOptions()
 options = {
     'addr': '3.83.190.70'
 }
-devicefarm_client = boto3.client("devicefarm")
+devicefarm_client = boto3.client("devicefarm", region_name="us-west-2")
 
 testgrid_url_response = devicefarm_client.create_test_grid_url(
       projectArn="arn:aws:devicefarm:us-west-2:810639563432:testgrid-project:fea1916c-32b0-47fd-b008-804e5d7c1e7e",
@@ -22,7 +22,7 @@ testgrid_url_response = devicefarm_client.create_test_grid_url(
 
 
 driver = webdriver.Remote(
-    command_executor=testgrid_url_response,
+    command_executor=testgrid_url_response["url"],
     desired_capabilities=chrome_options.to_capabilities(),
     seleniumwire_options=options
 )
