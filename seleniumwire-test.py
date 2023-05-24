@@ -6,11 +6,14 @@ from selenium.webdriver.common.by import By
 from seleniumwire.webdriver import DesiredCapabilities
 from webdriver_manager.chrome import ChromeDriverManager
 chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--proxy-server=ec2-3-83-190-70.compute-1.amazonaws.com:8087')  # Specify your Kubernetes service-name here
+chrome_options.add_argument('--ignore-certificate-errors')
 # you are going to tell selenium the IP where the code will run
 # replace scrap with the IP, I use scrap because my docker-compose file uses that name
 
 # driver = webdriver.Chrome(ChromeDriverManager().install())
 options = {
+    'auto_config': False,
     'addr': 'ec2-3-83-190-70.compute-1.amazonaws.com',
     'port': 8087
 }
