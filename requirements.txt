@@ -1,0 +1,3 @@
+boto3 >= 1.10.44
+selenium-wire >= 5.1.0
+selenium >= 4.9.1
