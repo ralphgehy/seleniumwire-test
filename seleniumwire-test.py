@@ -34,7 +34,7 @@ print(driver.capabilities)
 
 driver.get("https://www.hudl.com/login")
 time.sleep(2)
-driver.find_element(By.ID, "email").send_keys("ralph.gehy@hudl.com")
+driver.find_element(By.ID, "email").send_keys("john.wayne@hudl.com")
 driver.find_element(By.CSS_SELECTOR, "button[data-qa-id='login-btn']").click()
 time.sleep(15)
 # Access requests via the `requests` attribute
