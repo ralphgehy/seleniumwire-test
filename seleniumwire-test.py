@@ -8,14 +8,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 chrome_options = webdriver.ChromeOptions()
 # you are going to tell selenium the IP where the code will run
 # replace scrap with the IP, I use scrap because my docker-compose file uses that name
-chrome_options.add_argument('--proxy-server=3.83.190.70:8087')
-chrome_options.add_argument('--ignore-certificate-errors')
 
 # driver = webdriver.Chrome(ChromeDriverManager().install())
 options = {
-    'auto_config': False,
-    'addr': '3.83.190.70',
-    'port': 8087
+    'addr': '3.83.190.70'
 }
 devicefarm_client = boto3.client("devicefarm")
 
