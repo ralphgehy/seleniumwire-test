@@ -20,7 +20,7 @@ options = {
 devicefarm_client = boto3.client("devicefarm")
 
 testgrid_url_response = devicefarm_client.create_test_grid_url(
-      projectArn="arn:aws:devicefarm:us-west-2:810639563432:project:f86810bd-a3a1-47f7-bdf3-7127a8b9f211",
+      projectArn="arn:aws:devicefarm:us-west-2:810639563432:testgrid-project:fea1916c-32b0-47fd-b008-804e5d7c1e7e",
       expiresInSeconds=300
       )
 
